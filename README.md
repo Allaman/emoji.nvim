@@ -81,7 +81,7 @@ Telescope integration should work out of the box if Telescope is installed.
 2. `:Telescope emoji` does the same but invokes Telescope instead of `vim.ui.select`. (if telescope.nvim is installed).
 3. While in insert mode typing `:` triggers the auto-completion of nvim-cmp. (if nvim-cmp integration is enabled and configured).
 
-You can also create key bindings to your linking.
+You can also create key bindings to your liking.
 
 ## 💡 Similar plugins and inspiration
 
