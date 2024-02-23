@@ -1,0 +1,20 @@
+{
+  "neodev": {
+    "library": {
+      "enabled": true,
+      "plugins": [
+        "emoji.nvim",
+        "nvim-cmp",
+        "nvim-notify",
+        "telescope.nvim"
+      ]
+    }
+  },
+  "neoconf": {
+    "plugins": {
+      "lua_ls": {
+        "enabled": true
+      }
+    }
+  }
+}
