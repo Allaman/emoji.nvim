@@ -10,7 +10,7 @@
   <p>
     <img src="https://github.com/Allaman/emoji.nvim/actions/workflows/ci.yml/badge.svg" alt="CI"/>
     <!-- <img src="https://github.com/Allaman/emoji.nvim/actions/workflows/update-emojis.yml/badge.svg" alt="CI"/> -->
-    <img src="https://img.shields.io/github/repo-size/Allaman/emoji" alt="size"/>
+    <img src="https://img.shields.io/github/repo-size/Allaman/emoji.nvim" alt="size"/>
     <img src="https://img.shields.io/github/issues/Allaman/emoji.nvim.svg" alt="issues"/>
     <img src="https://img.shields.io/github/last-commit/Allaman/emoji.nvim" alt="last commit"/>
     <img src="https://img.shields.io/github/license/Allaman/emoji.nvim" alt="license"/>
