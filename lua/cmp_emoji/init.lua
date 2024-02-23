@@ -35,7 +35,6 @@ local function create_cmp_items()
       lterText = emoji.slug,
     })
   end
-  vim.print(cmp_items)
   return cmp_items
 end
 

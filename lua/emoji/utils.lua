@@ -53,7 +53,6 @@ M.insert_string_at_current_cursor = function(text)
   table.unpack = table.unpack or unpack -- 5.1 compatibility
   local row, col = table.unpack(vim.api.nvim_win_get_cursor(0))
   row = row - 1 -- Adjust because Lua is 1-indexed but Neovim API expects 0-indexed
-  vim.print(text)
   vim.api.nvim_buf_set_text(buf, row, col, row, col, { text })
 end
 
