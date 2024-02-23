@@ -1,4 +1,4 @@
-<h1 align="center">emoji.nvim😀</h1>
+<h1 align="center">emoji.nvim 😀</h1>
 
 <div align="center">
   <p>
@@ -20,7 +20,7 @@
 
 ## ❓ Why
 
-Though there are a couple of plugins (see [Similar plugins and inspiration](#similar-plugins-and-inspiration)), they look a little unmaintained. So I decided to make a [15th plugin](https://xkcd.com/927/).😉
+Though there are a couple of plugins (see [Similar plugins and inspiration](#similar-plugins-and-inspiration)), they look a little unmaintained. So I decided to make a [15th plugin](https://xkcd.com/927/). 😉
 
 ## 💫 Features
 
