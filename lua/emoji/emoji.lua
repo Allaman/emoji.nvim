@@ -13,7 +13,6 @@ local Emoji = {}
 ---@param file_path string
 ---@return EmojiData
 Emoji.load_emojis_from_json = function(file_path)
-  vim.print()
   local file, err = io.open(file_path, "r")
   if not file then
     utils.error("cannot open emoji data file at '" .. file_path .. "' with error: " .. err)
