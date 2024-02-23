@@ -45,6 +45,7 @@ With [Lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
 {
   "allaman/emoji.nvim",
+  version = 1.0.0, -- optionally pin to a tag
   ft = "markdown", -- adjust to your needs
   dependencies = {
     -- optional for nvim-cmp integration
