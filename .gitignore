@@ -1,4 +1,6 @@
+docs/
 media/
+notes.md
 .DS_STORE
 .tests/
 .luarc.json
