@@ -23,7 +23,11 @@ function Emoji.setup(opts)
   end
 end
 
-Emoji.insert = require("emoji.ui").select_and_insert_emoji
-Emoji.insert_by_group = require("emoji.ui").select_and_insert_emoji_by_group
+Emoji.insert = function()
+  require("emoji.ui").select_and_insert_emoji()
+end
+Emoji.insert_by_group = function()
+  require("emoji.ui").select_and_insert_emoji_by_group()
+end
 
 return Emoji
