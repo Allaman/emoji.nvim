@@ -29,7 +29,7 @@ end
 
 function M.finder()
   local plugin_path = require("emoji.config").options.plugin_path
-  local emojis = require("emoji.emoji").load_emojis_from_json(plugin_path .. "emoji.nvim/lua/emoji/emojis2.json")
+  local emojis = require("emoji.emoji").load_emojis_from_json(plugin_path .. "emoji.nvim/lua/emoji/emojis.json")
   local results = {}
   for _, e in ipairs(emojis) do
     table.insert(results, { name = e.unicode_name, character = e.character, group = e.group })

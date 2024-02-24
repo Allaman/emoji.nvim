@@ -1,7 +1,7 @@
 local utils = require("emoji.utils")
 local plugin_path = require("emoji.config").options.plugin_path
 
-local emojis = require("emoji.emoji").load_emojis_from_json(plugin_path .. "emoji.nvim/lua/emoji/emojis2.json")
+local emojis = require("emoji.emoji").load_emojis_from_json(plugin_path .. "emoji.nvim/lua/emoji/emojis.json")
 local groups = require("emoji.emoji").get_groups(emojis)
 
 local UI = {}
