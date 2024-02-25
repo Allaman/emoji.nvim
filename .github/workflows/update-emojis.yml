@@ -1,7 +1,6 @@
 name: Update emojis
 on:
   push:
-    - main
   # schedule:
   #   - cron: "0 16 * * *"
 
