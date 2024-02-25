@@ -100,4 +100,4 @@ You can also create key bindings to your liking.
 
 ## ♥️ Credits
 
-Thanks to [emojisource.app](https://emojisource.app/) that provides the emoji API used in GitHub Actions to automatically update emojis.
+Thanks to [emojisource.app](https://emojisource.app/) for providing its emoji API that is used in GitHub Actions to automatically update emojis.
