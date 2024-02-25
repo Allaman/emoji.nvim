@@ -68,15 +68,19 @@ With [Lazy.nvim](https://github.com/folke/lazy.nvim):
 For nvim-cmp integration add `emoji` to your list of sources:
 
 ```lua
-    local sources = {
-      { name = "nvim_lsp" },
-      { name = "buffer", keyword_length = 5 },
-      { name = "luasnip" },
-      { name = "emoji" },
-    }
+local sources = {
+  { name = "nvim_lsp" },
+  { name = "buffer", keyword_length = 5 },
+  { name = "luasnip" },
+  { name = "emoji" },
+}
 ```
 
-Telescope integration should work out of the box if Telescope is installed.
+For telescope integration load the extension via:
+
+```la
+telescope.load_extension("emoji")
+```
 
 ## 💻 Use
 
