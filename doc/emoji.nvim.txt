@@ -1,4 +1,4 @@
-*emoji.nvim.txt*       For Neovim >= 0.9.0       Last change: 2024 February 23
+*emoji.nvim.txt*       For Neovim >= 0.9.0       Last change: 2024 February 24
 
 ==============================================================================
 Table of Contents                               *emoji.nvim-table-of-contents*
@@ -14,6 +14,9 @@ emoji.nvim
 
 WHY                                                           *emoji.nvim-why*
 
+This plugin allows you to easily search and insert emojis in your current
+buffer.
+
 Though there are a couple of plugins (see
 |emoji.nvim-similar-plugins-and-inspiration|), they look a little unmaintained.
 So I decided to make a 15th plugin <https://xkcd.com/927/>.
@@ -21,7 +24,7 @@ So I decided to make a 15th plugin <https://xkcd.com/927/>.
 
 FEATURES                                                 *emoji.nvim-features*
 
-- Automatic updates via GitHub actions.
+- Automatic updates of the emoji set via GitHub actions.
 - No dependencies (relies on `vim.ui.select`).
 - Optional telescope.nvim <https://github.com/nvim-telescope/telescope.nvim> integration.
 - Optional nvim-cmp <https://github.com/hrsh7th/nvim-cmp> integration.
@@ -34,7 +37,7 @@ With Lazy.nvim <https://github.com/folke/lazy.nvim>
 >lua
     {
       "allaman/emoji.nvim",
-      version = 1.0.0, -- optionally pin to a tag
+      version = "1.0.0", -- optionally pin to a tag
       ft = "markdown", -- adjust to your needs
       dependencies = {
         -- optional for nvim-cmp integration
