@@ -5,6 +5,7 @@ Table of Contents                               *emoji.nvim-table-of-contents*
 
   - Why                                                       |emoji.nvim-why|
   - Features                                             |emoji.nvim-features|
+  - Demo                                                     |emoji.nvim-demo|
   - Installation                                     |emoji.nvim-installation|
   - Use                                                       |emoji.nvim-use|
   - Similar plugins and inspiration|emoji.nvim-similar-plugins-and-inspiration|
@@ -18,18 +19,24 @@ This plugin allows you to easily search and insert emojis in your current
 buffer.
 
 Though there are a couple of plugins (see
-|emoji.nvim-similar-plugins-and-inspiration|), they look a little unmaintained.
-So I decided to make a 15th plugin <https://xkcd.com/927/>.
+|emoji.nvim-similar-plugins-and-inspiration|), I decided to make a 15th plugin
+<https://xkcd.com/927/>.
+
+Jokesaside, I could not find a plugin that fulfills my wish for both telescope
+and cmp integration, so why not write a plugin myself?
 
 
 FEATURES                                                 *emoji.nvim-features*
 
-- Automatic updates of the emoji set via GitHub actions.
+- Automatic updates of available emojis via GitHub actions (emojisource.app <https://emojisource.app/> as source).
 - No dependencies (relies on `vim.ui.select`).
-- Optional telescope.nvim <https://github.com/nvim-telescope/telescope.nvim> integration.
-- Optional nvim-cmp <https://github.com/hrsh7th/nvim-cmp> integration.
+- (Optional) telescope.nvim <https://github.com/nvim-telescope/telescope.nvim> integration.
+- (Optional) nvim-cmp <https://github.com/hrsh7th/nvim-cmp> integration.
 
-Some pics
+
+DEMO                                                         *emoji.nvim-demo*
+
+vim.uitelescopecmp
 INSTALLATION                                         *emoji.nvim-installation*
 
 With Lazy.nvim <https://github.com/folke/lazy.nvim>
@@ -89,6 +96,7 @@ SIMILAR PLUGINS AND INSPIRATION   *emoji.nvim-similar-plugins-and-inspiration*
 - nerdicons.nvim <https://github.com/nvimdev/nerdicons.nvim>
 - telescope-emoji <https://github.com/xiyaowong/telescope-emoji.nvim>
 - emoji_picker-nvim <https://github.com/WilsonOh/emoji_picker-nvim>
+- telescope-symbols <https://github.com/nvim-telescope/telescope-symbols.nvim>
 
 
 CREDITS                                                   *emoji.nvim-credits*
