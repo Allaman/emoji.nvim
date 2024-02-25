@@ -1,8 +1,7 @@
 name: Update emojis
 on:
-  push:
-  # schedule:
-  #   - cron: "0 16 * * *"
+  schedule:
+    - cron: "0 0 * * 0" # At 00:00 on Sunday
 
 jobs:
   update-emojis:
@@ -25,3 +24,9 @@ jobs:
 
       - name: create PR
         uses: peter-evans/create-pull-request@v4
+        with:
+          title: Update emojis
+          commit-message: "feat: update emojis"
+          delete-branch: true
+          commiter: github-actions[bot]@users.noreply.github.com
+          author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
