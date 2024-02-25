@@ -39,6 +39,8 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 <summary>vim.ui</summary
                  
 [![ui.png](https://s9.gifyu.com/images/SFndT.png)](https://gifyu.com/image/SFndT)
+
+Please note that I use [dressing.nvim](https://github.com/stevearc/dressing.nvim) so your UI might look different!
 </details>
 
 <details>
