@@ -1,0 +1,28 @@
+name: Update emojis
+on:
+  push:
+    - main
+  # schedule:
+  #   - cron: "0 16 * * *"
+
+jobs:
+  update-emojis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: fetch json
+        run: |
+          curl -sX GET "https://emojisource.app/api/v1/emojis" -H "Authorization: Bearer ${{secrets.EMOJI_SOURCE_TOKEN}}" | jq -r 'map(del(.subgroup, .code_point))' > /tmp/emojis.json
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Minify json
+        run: |
+          python -c 'import json, sys;json.dump(json.load(sys.stdin), sys.stdout)' < /tmp/emojis.json > ./lua/emoji/emojis.json
+
+      - name: create PR
+        uses: peter-evans/create-pull-request@v4
