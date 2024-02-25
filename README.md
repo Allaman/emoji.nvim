@@ -22,22 +22,32 @@
 
 This plugin allows you to easily search and insert emojis in your current buffer.
 
-Though there are a couple of plugins (see [Similar plugins and inspiration](#similar-plugins-and-inspiration)), they look a little unmaintained. So I decided to make a [15th plugin](https://xkcd.com/927/). 😉
+Though there are a couple of plugins (see [Similar plugins and inspiration](#similar-plugins-and-inspiration)), I decided to make a [15th plugin](https://xkcd.com/927/). 😉
+
+Jokes aside, I could not find a plugin that fulfills my wish for both telescope and cmp integration, so why not write a plugin myself?
 
 ## 💫 Features
 
-- Automatic updates of the emoji set via GitHub actions.
+- Automatic updates of available emojis via GitHub actions ([emojisource.app](https://emojisource.app/) as source).
 - No dependencies (relies on `vim.ui.select`).
-- Optional [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration.
-- Optional [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration.
+- (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration.
+- (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration.
+
+## Demo
 
 <details>
-<summary>Some pics</summary
-
+<summary>vim.ui</summary
 [![ui.png](https://s9.gifyu.com/images/SFndT.png)](https://gifyu.com/image/SFndT)
-[![telescope.png](https://s9.gifyu.com/images/SFndw.png)](https://gifyu.com/image/SFndw)
-[![cmp.png](https://s9.gifyu.com/images/SFnd3.png)](https://gifyu.com/image/SFnd3)
+</details>
 
+<details>
+<summary>telescope</summary
+[![telescope.png](https://s9.gifyu.com/images/SFndw.png)](https://gifyu.com/image/SFndw)
+</details>
+
+<details>
+<summary>cmp</summary
+[![cmp.png](https://s9.gifyu.com/images/SFnd3.png)](https://gifyu.com/image/SFnd3)
 </details>
 
 ## 🔧 Installation
@@ -97,6 +107,7 @@ You can also create key bindings to your liking.
 - [nerdicons.nvim](https://github.com/nvimdev/nerdicons.nvim)
 - [telescope-emoji](https://github.com/xiyaowong/telescope-emoji.nvim)
 - [emoji_picker-nvim](https://github.com/WilsonOh/emoji_picker-nvim)
+- [telescope-symbols](https://github.com/nvim-telescope/telescope-symbols.nvim)
 
 ## ♥️ Credits
 
