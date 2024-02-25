@@ -5,7 +5,7 @@ Table of Contents                               *emoji.nvim-table-of-contents*
 
   - Why                                                       |emoji.nvim-why|
   - Features                                             |emoji.nvim-features|
-  - Demo                                                     |emoji.nvim-demo|
+  - Screenshots                                       |emoji.nvim-screenshots|
   - Installation                                     |emoji.nvim-installation|
   - Use                                                       |emoji.nvim-use|
   - Similar plugins and inspiration|emoji.nvim-similar-plugins-and-inspiration|
@@ -34,7 +34,7 @@ FEATURES                                                 *emoji.nvim-features*
 - (Optional) nvim-cmp <https://github.com/hrsh7th/nvim-cmp> integration.
 
 
-DEMO                                                         *emoji.nvim-demo*
+SCREENSHOTS                                           *emoji.nvim-screenshots*
 
 vim.uitelescopecmp
 INSTALLATION                                         *emoji.nvim-installation*
