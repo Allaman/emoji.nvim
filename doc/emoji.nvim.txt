@@ -75,7 +75,7 @@ Fornvim-cmp integration add `emoji` to your list of sources:
 
 For telescope integration load the extension via:
 
->la
+>lua
     require("telescope").load_extension("emoji")
 <
 
