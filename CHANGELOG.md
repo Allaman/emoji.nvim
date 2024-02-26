@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/Allaman/emoji.nvim/compare/v1.0.1...v1.0.2) (2024-02-26)
+
+
+### Bug Fixes
+
+* autocompletion not triggering after quote character ([da3fa2c](https://github.com/Allaman/emoji.nvim/commit/da3fa2c4b9521aabd8b01d2d7547839a3ac8f42e))
+
 ## [1.0.1](https://github.com/Allaman/emoji.nvim/compare/v1.0.0...v1.0.1) (2024-02-24)
 
 
