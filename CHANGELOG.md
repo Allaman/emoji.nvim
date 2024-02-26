@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/Allaman/emoji.nvim/compare/v1.0.2...v1.0.3) (2024-02-26)
+
+
+### Bug Fixes
+
+* do not overwrite all cmp sources [#5](https://github.com/Allaman/emoji.nvim/issues/5) ([9f4d3a4](https://github.com/Allaman/emoji.nvim/commit/9f4d3a418ae1478d2eee6e200d6a390c72256c9e))
+
 ## [1.0.2](https://github.com/Allaman/emoji.nvim/compare/v1.0.1...v1.0.2) (2024-02-26)
 
 
