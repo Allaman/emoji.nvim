@@ -14,7 +14,7 @@ jobs:
           curl -sX GET "https://emojisource.app/api/v1/emojis" -H "Authorization: Bearer ${{secrets.EMOJI_SOURCE_TOKEN}}" | jq -r 'map(del(.subgroup, .code_point))' > /tmp/emojis.json
 
       - name: Set up Python 3.12
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
