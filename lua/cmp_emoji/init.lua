@@ -14,7 +14,7 @@ source.get_trigger_characters = function()
   return { ":" }
 end
 source.get_keyword_pattern = function()
-  return [=[\%(\s\|^\)\zs:[[:alnum:]_\-\+]*:\?]=]
+  return [=[\%([[:space:]"'`]\|^\)\zs:[[:alnum:]_\-\+]*:\?]=]
 end
 
 ---creates the datastructure for cmp source
