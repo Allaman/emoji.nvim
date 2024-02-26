@@ -37,22 +37,25 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 
 <details>
 <summary>vim.ui</summary
-                 
+
 [![ui.png](https://s9.gifyu.com/images/SFndT.png)](https://gifyu.com/image/SFndT)
 
 Please note that I use [dressing.nvim](https://github.com/stevearc/dressing.nvim) so your UI might look different!
+
 </details>
 
 <details>
 <summary>telescope</summary
-                    
+
 [![telescope.png](https://s9.gifyu.com/images/SFndw.png)](https://gifyu.com/image/SFndw)
+
 </details>
 
 <details>
 <summary>cmp</summary
-              
+
 [![cmp.png](https://s9.gifyu.com/images/SFnd3.png)](https://gifyu.com/image/SFnd3)
+
 </details>
 
 ## 🔧 Installation
@@ -93,7 +96,7 @@ local sources = {
 
 For telescope integration load the extension via:
 
-```la
+```lua
 require("telescope").load_extension("emoji")
 ```
 
