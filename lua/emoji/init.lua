@@ -15,11 +15,7 @@ function Emoji.setup(opts)
       utils.error("cannot load nvim-cmp for emoji completion")
       return
     end
-    -- Inject emoji as a cmp source.
-    local cmp = require("cmp")
-    cmp.register_source("emoji", require("cmp_emoji.init").new())
-    local sources = { { name = "emoji" } }
-    cmp.setup.buffer({ sources = sources })
+    require("cmp").register_source("emoji", require("cmp_emoji.init").new())
   end
 end
 
