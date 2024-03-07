@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Allaman/emoji.nvim/compare/v1.0.3...v1.1.0) (2024-03-07)
+
+
+### Features
+
+* Add kaomoji support [#6](https://github.com/Allaman/emoji.nvim/issues/6) ([d4535fe](https://github.com/Allaman/emoji.nvim/commit/d4535fe0bad708e606bb01cae50c05f7f2f69431))
+
 ## [1.0.3](https://github.com/Allaman/emoji.nvim/compare/v1.0.2...v1.0.3) (2024-02-26)
 
 
