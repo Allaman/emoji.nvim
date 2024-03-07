@@ -1,6 +1,9 @@
+local utils = require("emoji.utils")
 local plugin_path = require("emoji.config").options.plugin_path
+local emoji_path = require("emoji.config").paths.emoji
 
-local emojis = require("emoji.emoji").load_emojis_from_json(plugin_path .. "emoji.nvim/lua/emoji/emojis.json")
+-- TODO: use plenary.path
+local emojis = utils.load_from_json(plugin_path .. emoji_path)
 local source = {}
 
 source.new = function()

@@ -1,4 +1,3 @@
-local emoji = require("emoji.emoji")
 local utils = require("emoji.utils")
 
 local pickers = require("telescope.pickers")
@@ -29,7 +28,8 @@ end
 
 function M.finder()
   local plugin_path = require("emoji.config").options.plugin_path
-  local emojis = require("emoji.emoji").load_emojis_from_json(plugin_path .. "emoji.nvim/lua/emoji/emojis.json")
+  local emoji_path = require("emoji.config").paths.emoji
+  local emojis = utils.load_from_json(plugin_path .. emoji_path)
   local results = {}
   for _, e in ipairs(emojis) do
     table.insert(results, { name = e.unicode_name, character = e.character, group = e.group })
