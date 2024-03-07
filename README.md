@@ -20,7 +20,7 @@
 
 ## ❓ Why
 
-This plugin allows you to easily search and insert emojis in your current buffer.
+This plugin allows you to easily search and insert emojis and kaomojis in your current buffer.
 
 Though there are a couple of plugins (see [Similar plugins and inspiration](#similar-plugins-and-inspiration)), I decided to make a [15th plugin](https://xkcd.com/927/). 😉
 
@@ -30,13 +30,13 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 
 - Automatic updates of available emojis via GitHub actions ([emojisource.app](https://emojisource.app/) as source).
 - No dependencies (relies on `vim.ui.select`).
-- (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration.
-- (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration.
+- (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration (emojis only).
+- (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration (emojis only).
 
 ## Screenshots
 
 <details>
-<summary>vim.ui</summary
+<summary>emojis via vim.ui</summary
 
 [![ui.png](https://s9.gifyu.com/images/SFndT.png)](https://gifyu.com/image/SFndT)
 
@@ -45,14 +45,23 @@ Please note that I use [dressing.nvim](https://github.com/stevearc/dressing.nvim
 </details>
 
 <details>
-<summary>telescope</summary
+<summary>kaomojis via vin.ui</summary
+
+[![kaomojis.png](https://s9.gifyu.com/images/SUNSK.png)](https://gifyu.com/image/SUNSK)
+
+Please note that I use [dressing.nvim](https://github.com/stevearc/dressing.nvim) so your UI might look different!
+
+</details>
+
+<details>
+<summary>telescope (emojis)</summary
 
 [![telescope.png](https://s9.gifyu.com/images/SFndw.png)](https://gifyu.com/image/SFndw)
 
 </details>
 
 <details>
-<summary>cmp</summary
+<summary>cmp (emojis)</summary
 
 [![cmp.png](https://s9.gifyu.com/images/SFnd3.png)](https://gifyu.com/image/SFnd3)
 
@@ -102,9 +111,16 @@ require("telescope").load_extension("emoji")
 
 ## 💻 Use
 
-1. `:InsertEmoji` respective `lua require("emoji").insert()`) or `:InsertEmojiByGroup` respective `lua require("emoji").insert_by_group()` allows you to select an emoji that is inserted at your cursor's current position.
+### Emojis
+
+1. `:InsertEmoji` respective `lua require("emoji").insert()` or `:InsertEmojiByGroup` respective `lua require("emoji").insert_by_group()` allows you to select an emoji that is inserted at your cursor's current position.
 2. `:Telescope emoji` does the same but invokes Telescope instead of `vim.ui.select`. (if telescope.nvim is installed).
 3. While in insert mode typing `:` triggers the auto-completion of nvim-cmp. (if nvim-cmp integration is enabled and configured).
+
+### Kaomojis
+
+1. `:InsertKaomoji` respective `lua require("emoji").insert_kaomoji()`
+2. `:InsertKaomojiByGroup` respective `lua require("emoji").insert_kaomoji_by_group()`
 
 You can also create key bindings to your liking.
 
@@ -120,3 +136,5 @@ You can also create key bindings to your liking.
 ## ♥️ Credits
 
 Thanks to [emojisource.app](https://emojisource.app/) for providing its emoji API that is used in GitHub Actions to automatically update emojis.
+
+Thanks to [hines-r](https://github.com/hines-r) for providing [kaomojis.json](https://github.com/hines-r/kaomoji-api/blob/master/src/kaomoji.json)

@@ -48,6 +48,54 @@ M.is_neovim_version_satisfied = function(version)
   return version <= tonumber(vim.version().minor)
 end
 
+---load emoji data from JSON
+---@param file_path string
+---@return table
+M.load_from_json = function(file_path)
+  local file, err = io.open(file_path, "r")
+  if not file then
+    M.error("cannot open data file at '" .. file_path .. "' with error: " .. err)
+    return {}
+  end
+
+  local content = file:read("a")
+  file:close()
+
+  local json_data = vim.json.decode(content, {})
+  if json_data == {} or json_data == nil then
+    error("empty json decoded")
+    return {}
+  end
+  return json_data
+end
+
+---creates a list of unique emoji groups
+---@param emojis EmojiData
+---@return table<string><number>
+M.get_groups = function(emojis)
+  local groups = {}
+  for _, e in ipairs(emojis) do
+    groups[e.group] = 1
+  end
+  return groups
+end
+
+---filter emojis based on their group
+---@param emojis EmojiData
+---@param group string
+---@return EmojiData
+M.filter_by_group = function(emojis, group)
+  ---@type EmojiData
+  ---@diagnostic disable-next-line: missing-fields
+  local filtered_emojis = {}
+  for _, e in ipairs(emojis) do
+    if e.group == group then
+      table.insert(filtered_emojis, e)
+    end
+  end
+  return filtered_emojis
+end
+
 M.insert_string_at_current_cursor = function(text)
   local buf = vim.api.nvim_get_current_buf()
   table.unpack = table.unpack or unpack -- 5.1 compatibility

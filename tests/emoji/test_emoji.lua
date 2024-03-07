@@ -2,10 +2,10 @@ local new_set = MiniTest.new_set
 local expect, eq, neq = MiniTest.expect, MiniTest.expect.equality, MiniTest.expect.no_equality
 
 local T = new_set()
-local emoji = require("emoji.emoji")
+local utils = require("emoji.utils")
 
 T["load emoji from json"] = function()
-  local get = emoji.load_emojis_from_json("tests/emoji/test_data/test.json")
+  local get = utils.load_from_json("tests/emoji/test_data/test.json")
   local want = {
     {
       character = "😀",
@@ -29,7 +29,7 @@ end
 
 -- TODO how to suppress error notification?
 T["load non existe json"] = function()
-  expect.error(emoji.load_emojis_from_json("foobar.json"), nil)
+  expect.error(utils.load_from_json("foobar.json"), nil)
 end
 
 -- FIXME does not "pass"
@@ -38,32 +38,34 @@ end
 -- end
 
 T["get emoji groups"] = function()
-  local emojis = emoji.load_emojis_from_json("tests/emoji/test_data/test.json")
-  local get = emoji.get_groups(emojis)
+  local emojis = utils.load_from_json("tests/emoji/test_data/test.json")
+  local get = utils.get_groups(emojis)
   local want = {
     flags = 1,
-    ["smileys-emotion"] = 1
+    ["smileys-emotion"] = 1,
   }
   eq(want, get)
 end
 
 T["filter emoji by group"] = function()
-  local emojis = emoji.load_emojis_from_json("tests/emoji/test_data/test.json")
-  local get = emoji.filter_emojis_by_group(emojis, "flags")
-  local want = { {
+  local emojis = utils.load_from_json("tests/emoji/test_data/test.json")
+  local get = utils.filter_by_group(emojis, "flags")
+  local want = {
+    {
       character = "😃",
       code_point = "1F603",
       group = "flags",
       slug = "grinning-face-with-big-eyes",
       subgroup = "face-smiling",
-      unicode_name = "grinning face with big eyes"
-    } }
+      unicode_name = "grinning face with big eyes",
+    },
+  }
   eq(want, get)
 end
 
 T["filter emoji with missing group"] = function()
-  local emojis = emoji.load_emojis_from_json("tests/emoji/test_data/test.json")
-  local get = emoji.filter_emojis_by_group(emojis, "foo")
+  local emojis = utils.load_from_json("tests/emoji/test_data/test.json")
+  local get = utils.filter_by_group(emojis, "foo")
   local want = {}
   eq(want, get)
 end
