@@ -45,7 +45,7 @@ Please note that I use [dressing.nvim](https://github.com/stevearc/dressing.nvim
 </details>
 
 <details>
-<summary>kaomojis via vin.ui</summary
+<summary>kaomojis via vim.ui</summary
 
 [![kaomojis.png](https://s9.gifyu.com/images/SUNSK.png)](https://gifyu.com/image/SUNSK)
 
