@@ -1,3 +1,4 @@
+---
 name: Update emojis
 on:
   schedule:
