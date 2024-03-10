@@ -36,7 +36,7 @@ FEATURES                                                 *emoji.nvim-features*
 
 SCREENSHOTS                                           *emoji.nvim-screenshots*
 
-emojis via vim.uikaomojis via vin.uitelescope (emojis)cmp (emojis)
+emojis via vim.uikaomojis via vim.uitelescope (emojis)cmp (emojis)
 INSTALLATION                                         *emoji.nvim-installation*
 
 With Lazy.nvim <https://github.com/folke/lazy.nvim>
