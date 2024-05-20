@@ -89,6 +89,11 @@ With [Lazy.nvim](https://github.com/folke/lazy.nvim):
     -- is not vim.fn.stdpath("data") .. "/lazy/
     plugin_path = vim.fn.expand("$HOME/plugins/"),
   },
+  config = function(_, opts)
+    require("emoji").setup(opts)
+    -- optional for telescope integration
+    require("telescope").load_extension("emoji")
+  end,
 }
 ```
 
