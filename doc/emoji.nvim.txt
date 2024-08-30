@@ -1,4 +1,4 @@
-*emoji.nvim.txt*          For Neovim >= 0.9.0         Last change: 2024 May 20
+*emoji.nvim.txt*        For Neovim >= 0.9.0        Last change: 2024 August 30
 
 ==============================================================================
 Table of Contents                               *emoji.nvim-table-of-contents*
@@ -62,7 +62,8 @@ With Lazy.nvim <https://github.com/folke/lazy.nvim>
       config = function(_, opts)
         require("emoji").setup(opts)
         -- optional for telescope integration
-        require("telescope").load_extension("emoji")
+        local ts = require('telescope').load_extension 'emoji'
+        vim.keymap.set('n', '<leader>se', ts.emoji, { desc = '[S]earch [E]moji' })
       end,
     }
 <
