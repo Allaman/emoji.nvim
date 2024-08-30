@@ -93,7 +93,6 @@ With [Lazy.nvim](https://github.com/folke/lazy.nvim):
     require("emoji").setup(opts)
     -- optional for telescope integration
     local ts = require('telescope').load_extension 'emoji'
-    -- optional keymap for existing kickstart.nvim users
     vim.keymap.set('n', '<leader>se', ts.emoji, { desc = '[S]earch [E]moji' })
   end,
 }
