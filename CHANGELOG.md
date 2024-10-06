@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Allaman/emoji.nvim/compare/v1.2.0...v2.0.0) (2024-10-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Use emojis-app.com instead of emojisource.app
+
+### Features
+
+* Use emojis-app.com instead of emojisource.app ([959ba47](https://github.com/Allaman/emoji.nvim/commit/959ba4733f7d5f23803727559c444cc91767dc1c))
+
 ## [1.2.0](https://github.com/Allaman/emoji.nvim/compare/v1.1.0...v1.2.0) (2024-03-10)
 
 
