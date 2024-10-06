@@ -9,19 +9,19 @@ T["load emoji from json"] = function()
   local want = {
     {
       character = "😀",
-      code_point = "1F600",
+      codePoint = "1F600",
       group = "smileys-emotion",
       slug = "grinning-face",
-      subgroup = "face-smiling",
-      unicode_name = "grinning face",
+      subGroup = "face-smiling",
+      unicodeName = "grinning face",
     },
     {
       character = "😃",
-      code_point = "1F603",
+      codePoint = "1F603",
       group = "flags",
       slug = "grinning-face-with-big-eyes",
-      subgroup = "face-smiling",
-      unicode_name = "grinning face with big eyes",
+      subGroup = "face-smiling",
+      unicodeName = "grinning face with big eyes",
     },
   }
   eq(want, get)
@@ -53,11 +53,11 @@ T["filter emoji by group"] = function()
   local want = {
     {
       character = "😃",
-      code_point = "1F603",
+      codePoint = "1F603",
       group = "flags",
       slug = "grinning-face-with-big-eyes",
-      subgroup = "face-smiling",
-      unicode_name = "grinning face with big eyes",
+      subGroup = "face-smiling",
+      unicodeName = "grinning face with big eyes",
     },
   }
   eq(want, get)

@@ -32,7 +32,7 @@ function M.finder()
   local emojis = utils.load_from_json(plugin_path .. emoji_path)
   local results = {}
   for _, e in ipairs(emojis) do
-    table.insert(results, { name = e.unicode_name, character = e.character, group = e.group })
+    table.insert(results, { name = e.unicodeName, character = e.character, group = e.group })
   end
   return finders.new_table({
     results = results,

@@ -12,7 +12,7 @@ jobs:
 
       - name: fetch json
         run: |
-          curl -sX GET "https://emojisource.app/api/v1/emojis" -H "Authorization: Bearer ${{secrets.EMOJI_SOURCE_TOKEN}}" | jq -r 'map(del(.subgroup, .code_point))' > /tmp/emojis.json
+          curl -sX GET "https://emoji-api.com/emojis?access_key=${{secrets.EMOJI_SOURCE_TOKEN}}" | jq -r 'map(del(.subGroup, .codePoint))' > /tmp/emojis.json
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5

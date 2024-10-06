@@ -8,8 +8,8 @@ UI.select_and_insert = function(emojis)
   local emoji_options = {}
   for _, e in ipairs(emojis) do
     -- handle emojis
-    if e.unicode_name ~= nil then
-      table.insert(emoji_options, e.character .. " " .. e.unicode_name)
+    if e.unicodeName ~= nil then
+      table.insert(emoji_options, e.character .. " " .. e.unicodeName)
     end
     -- handle kaomojis
     if e.group ~= nil then

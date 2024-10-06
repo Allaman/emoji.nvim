@@ -28,7 +28,7 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 
 ## 💫 Features
 
-- Automatic updates of available emojis via GitHub actions ([emojisource.app](https://emojisource.app/) as source).
+- Automatic updates of available emojis via GitHub actions ([emojis-api.com](https://emoji-api.com/) as source).
 - No dependencies (relies on `vim.ui.select`).
 - (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration (emojis only).
 - (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration (emojis only).
@@ -141,6 +141,6 @@ You can also create key bindings to your liking.
 
 ## ♥️ Credits
 
-Thanks to [emojisource.app](https://emojisource.app/) for providing its emoji API that is used in GitHub Actions to automatically update emojis.
+Thanks to ([emojis-api.com](https://emoji-api.com/) for providing its emoji API that is used in GitHub Actions to automatically update emojis.
 
 Thanks to [hines-r](https://github.com/hines-r) for providing [kaomojis.json](https://github.com/hines-r/kaomoji-api/blob/master/src/kaomoji.json)
