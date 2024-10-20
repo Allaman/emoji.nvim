@@ -33,7 +33,7 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 - (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration (emojis only).
 - (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration (emojis only).
 
-## Screenshots
+## 🖼️ Screenshots
 
 <details>
 <summary>emojis via vim.ui</summary

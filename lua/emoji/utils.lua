@@ -104,4 +104,24 @@ M.insert_string_at_current_cursor = function(text)
   vim.api.nvim_buf_set_text(buf, row, col, row, col, { text })
 end
 
+M.create_emoji_options = function(data)
+  local options = {}
+  for _, e in ipairs(data) do
+    if e.unicodeName ~= nil then
+      table.insert(options, e.character .. " " .. e.unicodeName)
+    end
+  end
+  return options
+end
+
+M.create_kaomoji_options = function(data)
+  local options = {}
+  for _, e in ipairs(data) do
+    if e.character ~= nil then
+      table.insert(options, e.character .. " " .. e.group)
+    end
+  end
+  return options
+end
+
 return M
