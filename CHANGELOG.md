@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/Allaman/emoji.nvim/compare/v2.1.0...v2.1.1) (2024-10-20)
+
+
+### Bug Fixes
+
+* Differentation of emojis and kaomojis ([93ea09d](https://github.com/Allaman/emoji.nvim/commit/93ea09d493aba1b4e3cbd6a4dbe69349399c7db2))
+
 ## [2.1.0](https://github.com/Allaman/emoji.nvim/compare/v2.0.0...v2.1.0) (2024-10-14)
 
 
