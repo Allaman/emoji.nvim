@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/Allaman/emoji.nvim/compare/v2.1.1...v3.0.0) (2024-11-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* Rename user commands and replace emoji.vim with emoji.lua #26 ([#27](https://github.com/Allaman/emoji.nvim/issues/27))
+
+### Features
+
+* Rename user commands and replace emoji.vim with emoji.lua [#26](https://github.com/Allaman/emoji.nvim/issues/26) ([#27](https://github.com/Allaman/emoji.nvim/issues/27)) ([db76227](https://github.com/Allaman/emoji.nvim/commit/db762271d4c3ad01a83c6296a4da2c5becd262da))
+
 ## [2.1.1](https://github.com/Allaman/emoji.nvim/compare/v2.1.0...v2.1.1) (2024-10-20)
 
 
