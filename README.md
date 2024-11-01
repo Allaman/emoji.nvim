@@ -119,14 +119,14 @@ require("telescope").load_extension("emoji")
 
 ### Emojis
 
-1. `:InsertEmoji` respective `lua require("emoji").insert()` or `:InsertEmojiByGroup` respective `lua require("emoji").insert_by_group()` allows you to select an emoji that is inserted at your cursor's current position.
+1. `:EmojiInsert` respective `lua require("emoji").insert()` or `:EmojiInsertByGroup` respective `lua require("emoji").insert_by_group()` allows you to select an emoji that is inserted at your cursor's current position.
 2. `:Telescope emoji` does the same but invokes Telescope instead of `vim.ui.select`. (if telescope.nvim is installed).
 3. While in insert mode typing `:` triggers the auto-completion of nvim-cmp. (if nvim-cmp integration is enabled and configured).
 
 ### Kaomojis
 
-1. `:InsertKaomoji` respective `lua require("emoji").insert_kaomoji()`
-2. `:InsertKaomojiByGroup` respective `lua require("emoji").insert_kaomoji_by_group()`
+1. `:KaomojiInsert` respective `lua require("emoji").insert_kaomoji()`
+2. `:KaomojiInsertByGroup` respective `lua require("emoji").insert_kaomoji_by_group()`
 
 You can also create key bindings to your liking.
 
