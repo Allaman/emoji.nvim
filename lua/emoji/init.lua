@@ -20,24 +20,26 @@ function Main.setup(opts)
 end
 
 Main.insert = function()
-  local data = utils.load_from_json(config.options.plugin_path .. config.paths.emoji)
+  local data = utils.load_from_json(utils.get_emoji_data_path().filename)
   local options = utils.create_emoji_options(data)
   require("emoji.ui").select_and_insert(options)
 end
 Main.insert_by_group = function()
-  local data = utils.load_from_json(config.options.plugin_path .. config.paths.emoji)
+  local data = utils.load_from_json(utils.get_emoji_data_path().filename)
   local groups = utils.get_groups(data)
   require("emoji.ui").select_and_insert_emoji_by_group(data, groups)
 end
 
 Main.insert_kaomoji = function()
-  local data = require("emoji.kaomoji").normalized_data(config.options.plugin_path .. config.paths.kaomoji)
+  local file = utils.get_kaomoji_data_path().filename
+  local data = require("emoji.kaomoji").normalized_data(file)
   local options = utils.create_kaomoji_options(data)
   require("emoji.ui").select_and_insert(options)
 end
 
 Main.insert_kaomoji_by_group = function()
-  local data = require("emoji.kaomoji").normalized_data(config.options.plugin_path .. config.paths.kaomoji)
+  local file = utils.get_kaomoji_data_path().filename
+  local data = require("emoji.kaomoji").normalized_data(file)
   local groups = utils.get_groups(data)
   require("emoji.ui").select_and_insert_kaomoji_by_group(data, groups)
 end

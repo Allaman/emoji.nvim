@@ -124,4 +124,26 @@ M.create_kaomoji_options = function(data)
   return options
 end
 
+M.get_emoji_data_path = function()
+  local plugin_path = require("emoji.config").options.plugin_path
+  local emoji_path = require("emoji.config").paths.emoji
+  local ok, path = pcall(require, "plenary.path")
+  if not ok then
+    error("failed to load plenary.nvim")
+    return
+  end
+  return path:new(plugin_path, emoji_path)
+end
+
+M.get_kaomoji_data_path = function()
+  local plugin_path = require("emoji.config").options.plugin_path
+  local kaomoji_path = require("emoji.config").paths.kaomoji
+  local ok, path = pcall(require, "plenary.path")
+  if not ok then
+    error("failed to load plenary.nvim")
+    return
+  end
+  return path:new(plugin_path, kaomoji_path)
+end
+
 return M
