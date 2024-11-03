@@ -27,10 +27,9 @@ local make_display = function(entry)
 end
 
 function M.finder()
-  local plugin_path = require("emoji.config").options.plugin_path
-  local emoji_path = require("emoji.config").paths.emoji
-  local emojis = utils.load_from_json(plugin_path .. emoji_path)
   local results = {}
+  local emoji_path = utils.get_emoji_data_path().filename
+  local emojis = utils.load_from_json(emoji_path)
   for _, e in ipairs(emojis) do
     table.insert(results, { name = e.unicodeName, character = e.character, group = e.group })
   end

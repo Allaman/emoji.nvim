@@ -1,9 +1,8 @@
 local utils = require("emoji.utils")
-local plugin_path = require("emoji.config").options.plugin_path
-local emoji_path = require("emoji.config").paths.emoji
 
--- TODO: use plenary.path
-local emojis = utils.load_from_json(plugin_path .. emoji_path)
+local emoji_path = utils.get_emoji_data_path().filename
+local emojis = utils.load_from_json(emoji_path)
+
 local source = {}
 
 source.new = function()
