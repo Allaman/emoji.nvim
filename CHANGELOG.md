@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/Allaman/emoji.nvim/compare/v3.0.0...v3.1.0) (2024-11-03)
+
+
+### Features
+
+* Make path handling more robust [#29](https://github.com/Allaman/emoji.nvim/issues/29) ([#30](https://github.com/Allaman/emoji.nvim/issues/30)) ([918b1df](https://github.com/Allaman/emoji.nvim/commit/918b1df33f8dbca94e3e1064d993f7b8b2d437af))
+
 ## [3.0.0](https://github.com/Allaman/emoji.nvim/compare/v2.1.1...v3.0.0) (2024-11-01)
 
 
