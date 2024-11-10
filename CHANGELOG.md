@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/Allaman/emoji.nvim/compare/v3.1.0...v3.2.0) (2024-11-10)
+
+
+### Features
+
+* update emojis ([#32](https://github.com/Allaman/emoji.nvim/issues/32)) ([9ba0f30](https://github.com/Allaman/emoji.nvim/commit/9ba0f30829ce942001c7afa039e96718aef8f783))
+
 ## [3.1.0](https://github.com/Allaman/emoji.nvim/compare/v3.0.0...v3.1.0) (2024-11-03)
 
 
