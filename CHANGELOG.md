@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/Allaman/emoji.nvim/compare/v3.2.0...v4.0.0) (2024-12-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* Don't pollute command namespace for each action
+
+### Features
+
+* Don't pollute command namespace for each action ([d545414](https://github.com/Allaman/emoji.nvim/commit/d545414ef7221798b598c6c270dc33d488897bb3))
+
 ## [3.2.0](https://github.com/Allaman/emoji.nvim/compare/v3.1.0...v3.2.0) (2024-11-10)
 
 
