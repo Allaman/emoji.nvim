@@ -1,4 +1,4 @@
-*emoji.nvim.txt*       For Neovim >= 0.9.0       Last change: 2024 November 10
+*emoji.nvim.txt*       For Neovim >= 0.9.0       Last change: 2024 December 17
 
 ==============================================================================
 Table of Contents                               *emoji.nvim-table-of-contents*
@@ -30,6 +30,7 @@ FEATURES                                                 *emoji.nvim-features*
 
 - Automatic updates of available emojis via GitHub actions (emojis-api.com <https://emoji-api.com/> as source).
 - No dependencies (relies on `vim.ui.select`).
+- (Optional) fzf-lua <https://github.com/ibhagwan/fzf-lua> integration with `require("fzf-lua").register_ui_select()` (register fzf-lua as the UI interface for vim.ui.select)
 - (Optional) telescope.nvim <https://github.com/nvim-telescope/telescope.nvim> integration (emojis only).
 - (Optional) nvim-cmp <https://github.com/hrsh7th/nvim-cmp> integration (emojis only).
 
@@ -53,6 +54,8 @@ With Lazy.nvim <https://github.com/folke/lazy.nvim>
         "hrsh7th/nvim-cmp",
         -- optional for telescope integration
         "nvim-telescope/telescope.nvim",
+        -- optional for fzf-lua integration via vim.ui.select
+        "ibhagwan/fzf-lua",
       },
       opts = {
         -- default is false
@@ -93,17 +96,19 @@ USE                                                           *emoji.nvim-use*
 
 EMOJIS ~
 
-1. `:EmojiInsert` respective `lua require("emoji").insert()` or `:EmojiInsertByGroup` respective `lua require("emoji").insert_by_group()` allows you to select an emoji that is inserted at your cursor’s current position.
-2. `:Telescope emoji` does the same but invokes Telescope instead of `vim.ui.select`. (if telescope.nvim is installed).
+1. `:Emoji` and `:Emoji insert` respective `lua require("emoji").insert()` or `:Emoji by-group` respective `lua require("emoji").insert_by_group()` allows you to select an emoji that is inserted at your cursor’s current position.
+2. `:Telescope emoji` does the same but invokes Telescope instead of `vim.ui.select`. (if telescope.nvim is installed and the extension loaded).
 3. While in insert mode typing `:` triggers the auto-completion of nvim-cmp. (if nvim-cmp integration is enabled and configured).
 
 
 KAOMOJIS ~
 
-1. `:KaomojiInsert` respective `lua require("emoji").insert_kaomoji()`
-2. `:KaomojiInsertByGroup` respective `lua require("emoji").insert_kaomoji_by_group()`
+1. `:Emoji kaomoji` respective `lua require("emoji").insert_kaomoji()`
+2. `:Emoji kaomoji-by-group` respective `lua require("emoji").insert_kaomoji_by_group()`
 
 You can also create key bindings to your liking.
+
+Auto-completion in command mode is supported.
 
 
 SIMILAR PLUGINS AND INSPIRATION   *emoji.nvim-similar-plugins-and-inspiration*
