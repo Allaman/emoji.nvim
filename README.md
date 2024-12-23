@@ -33,6 +33,7 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 - (Optional) [fzf-lua](https://github.com/ibhagwan/fzf-lua) integration with `require("fzf-lua").register_ui_select()` (register fzf-lua as the UI interface for vim.ui.select)
 - (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration (emojis only).
 - (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration (emojis only).
+- (Optional) [blink.cmp](https://github.com/Saghen/blink.cmp) integration via [blink.compat](https://github.com/saghen/blink.compat) (emojis only).
 
 ## 🖼️ Screenshots
 
@@ -88,7 +89,7 @@ With [Lazy.nvim](https://github.com/folke/lazy.nvim):
     "ibhagwan/fzf-lua",
   },
   opts = {
-    -- default is false
+    -- default is false, also needed for blink.cmp integration!
     enable_cmp_integration = true,
     -- optional if your plugin installation directory
     -- is not vim.fn.stdpath("data") .. "/lazy/
@@ -118,6 +119,35 @@ For telescope integration load the extension via:
 
 ```lua
 require("telescope").load_extension("emoji")
+```
+
+blink.cmp integration:
+
+```lua
+{
+  "saghen/blink.cmp",
+  optional = true,
+  dependencies = { "allaman/emoji.nvim", "saghen/blink.compat" },
+  opts = {
+    sources = {
+      default = { "emoji" },
+      providers = {
+        emoji = {
+          name = "emoji",
+          module = "blink.compat.source",
+          -- overwrite kind of suggestion
+          transform_items = function(ctx, items)
+            local kind = require("blink.cmp.types").CompletionItemKind.Text
+            for i = 1, #items do
+              items[i].kind = kind
+            end
+            return items
+          end,
+        },
+      },
+    },
+  },
+}
 ```
 
 ## 💻 Use
