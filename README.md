@@ -31,6 +31,7 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 - Automatic updates of available emojis via GitHub actions ([emojis-api.com](https://emoji-api.com/) as source).
 - No dependencies (relies on `vim.ui.select`).
 - (Optional) [fzf-lua](https://github.com/ibhagwan/fzf-lua) integration with `require("fzf-lua").register_ui_select()` (register fzf-lua as the UI interface for vim.ui.select)
+- (Optional) [Snacks Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) integration with `ui_select = true` (default) to replace vim.ui.select
 - (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration (emojis only).
 - (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration (emojis only).
 - (Optional) [blink.cmp](https://github.com/Saghen/blink.cmp) integration via [blink.compat](https://github.com/saghen/blink.compat) (emojis only).
