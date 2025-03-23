@@ -1,4 +1,4 @@
-*emoji.nvim.txt*        For Neovim >= 0.9.0       Last change: 2025 January 15
+*emoji.nvim.txt*         For Neovim >= 0.9.0        Last change: 2025 March 23
 
 ==============================================================================
 Table of Contents                               *emoji.nvim-table-of-contents*
@@ -28,7 +28,6 @@ and cmp integration, so why not write a plugin myself?
 
 FEATURES                                                 *emoji.nvim-features*
 
-- Automatic updates of available emojis via GitHub actions (emojis-api.com <https://emoji-api.com/> as source).
 - No dependencies (relies on `vim.ui.select`).
 - (Optional) fzf-lua <https://github.com/ibhagwan/fzf-lua> integration with `require("fzf-lua").register_ui_select()` (register fzf-lua as the UI interface for vim.ui.select)
 - (Optional) Snacks Picker <https://github.com/folke/snacks.nvim/blob/main/docs/picker.md> integration with `ui_select = true` (default) to replace vim.ui.select
@@ -153,9 +152,6 @@ SIMILAR PLUGINS AND INSPIRATION   *emoji.nvim-similar-plugins-and-inspiration*
 
 
 CREDITS                                                   *emoji.nvim-credits*
-
-Thanks to (emojis-api.com <https://emoji-api.com/> for providing its emoji API
-that is used in GitHub Actions to automatically update emojis.
 
 Thanks to hines-r <https://github.com/hines-r> for providing kaomojis.json
 <https://github.com/hines-r/kaomoji-api/blob/master/src/kaomoji.json>
