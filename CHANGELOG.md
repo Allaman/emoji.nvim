@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://github.com/Allaman/emoji.nvim/compare/v4.0.0...v5.0.0) (2025-03-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* Remove automatic emoji data update
+
+### Continuous Integration
+
+* Remove automatic emoji data update ([4da4d8a](https://github.com/Allaman/emoji.nvim/commit/4da4d8ad12ac2f32804e356699784350bdb766f9))
+
 ## [4.0.0](https://github.com/Allaman/emoji.nvim/compare/v3.2.0...v4.0.0) (2024-12-17)
 
 
