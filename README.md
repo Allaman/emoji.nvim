@@ -28,7 +28,6 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 
 ## 💫 Features
 
-- Automatic updates of available emojis via GitHub actions ([emojis-api.com](https://emoji-api.com/) as source).
 - No dependencies (relies on `vim.ui.select`).
 - (Optional) [fzf-lua](https://github.com/ibhagwan/fzf-lua) integration with `require("fzf-lua").register_ui_select()` (register fzf-lua as the UI interface for vim.ui.select)
 - (Optional) [Snacks Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) integration with `ui_select = true` (default) to replace vim.ui.select
@@ -178,7 +177,5 @@ Auto-completion in command mode is supported.
 - [telescope-symbols](https://github.com/nvim-telescope/telescope-symbols.nvim)
 
 ## ♥️ Credits
-
-Thanks to ([emojis-api.com](https://emoji-api.com/) for providing its emoji API that is used in GitHub Actions to automatically update emojis.
 
 Thanks to [hines-r](https://github.com/hines-r) for providing [kaomojis.json](https://github.com/hines-r/kaomoji-api/blob/master/src/kaomoji.json)
