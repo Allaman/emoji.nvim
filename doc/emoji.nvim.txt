@@ -1,4 +1,4 @@
-*emoji.nvim.txt*         For Neovim >= 0.9.0         Last change: 2025 June 14
+*emoji.nvim.txt*        For Neovim >= 0.9.0        Last change: 2025 August 15
 
 ==============================================================================
 Table of Contents                               *emoji.nvim-table-of-contents*
