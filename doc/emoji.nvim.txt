@@ -1,4 +1,4 @@
-*emoji.nvim.txt*        For Neovim >= 0.9.0        Last change: 2025 August 15
+*emoji.nvim.txt*        For Neovim >= 0.9.0       Last change: 2025 October 13
 
 ==============================================================================
 Table of Contents                               *emoji.nvim-table-of-contents*
@@ -41,7 +41,7 @@ SCREENSHOTS                                           *emoji.nvim-screenshots*
 emojis via vim.uikaomojis via vim.uitelescope (emojis)cmp (emojis)
 INSTALLATION                                         *emoji.nvim-installation*
 
-With Lazy.nvim <https://github.com/folke/lazy.nvim>
+With Lazy.nvim <https://github.com/folke/lazy.nvim>:
 
 >lua
     {
@@ -74,7 +74,7 @@ With Lazy.nvim <https://github.com/folke/lazy.nvim>
     }
 <
 
-Fornvim-cmp integration add `emoji` to your list of sources:
+For nvim-cmp integration add `emoji` to your list of sources:
 
 >lua
     local sources = {
