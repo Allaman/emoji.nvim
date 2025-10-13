@@ -37,7 +37,7 @@ jobs:
           demojify: true
           treesitter: true
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore(build): auto-generate vimdoc"
           commit_user_name: "github-actions[bot]"
