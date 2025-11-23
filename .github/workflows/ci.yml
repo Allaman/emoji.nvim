@@ -13,7 +13,7 @@ jobs:
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Install Neovim Nightly
         uses: rhysd/action-setup-vim@v1
         with:
@@ -29,7 +29,7 @@ jobs:
     needs: tests
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
@@ -56,7 +56,7 @@ jobs:
         id: release
         with:
           release-type: simple
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
         run: |
