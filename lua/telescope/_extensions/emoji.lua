@@ -28,8 +28,11 @@ end
 
 function M.finder()
   local results = {}
-  local emoji_path = utils.get_emoji_data_path().filename
-  local emojis = utils.load_from_json(emoji_path)
+  local emoji_path_obj = utils.get_emoji_data_path()
+  if not emoji_path_obj then
+    return finders.new_table({ results = {} })
+  end
+  local emojis = utils.load_from_json(emoji_path_obj.filename)
   for _, e in ipairs(emojis) do
     table.insert(results, { name = e.unicodeName, character = e.character, group = e.group })
   end

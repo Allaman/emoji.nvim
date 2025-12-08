@@ -1,7 +1,7 @@
 local utils = require("emoji.utils")
 
-local emoji_path = utils.get_emoji_data_path().filename
-local emojis = utils.load_from_json(emoji_path)
+local emoji_path_obj = utils.get_emoji_data_path()
+local emojis = emoji_path_obj and utils.load_from_json(emoji_path_obj.filename) or {}
 
 local source = {}
 

@@ -63,7 +63,7 @@ M.load_from_json = function(file_path)
 
   local json_data = vim.json.decode(content, {})
   if json_data == {} or json_data == nil then
-    error("empty json decoded")
+    M.error("empty json decoded from '" .. file_path .. "'")
     return {}
   end
   return json_data
@@ -129,8 +129,8 @@ M.get_emoji_data_path = function()
   local emoji_path = require("emoji.config").paths.emoji
   local ok, path = pcall(require, "plenary.path")
   if not ok then
-    error("failed to load plenary.nvim")
-    return
+    M.error("failed to load plenary.nvim")
+    return nil
   end
   return path:new(plugin_path, emoji_path)
 end
@@ -140,8 +140,8 @@ M.get_kaomoji_data_path = function()
   local kaomoji_path = require("emoji.config").paths.kaomoji
   local ok, path = pcall(require, "plenary.path")
   if not ok then
-    error("failed to load plenary.nvim")
-    return
+    M.error("failed to load plenary.nvim")
+    return nil
   end
   return path:new(plugin_path, kaomoji_path)
 end
