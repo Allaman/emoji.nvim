@@ -18,17 +18,6 @@ M.error = function(msg)
   vim.notify(msg, vim.log.levels.ERROR, { title = "emoji.nvim" })
 end
 
----returns OS dependant path separator
----@return string
-M.path_separator = function()
-  local is_windows = vim.fn.has("win32") == 1
-  if is_windows == true then
-    return "\\"
-  else
-    return "/"
-  end
-end
-
 ---checks if a module is available
 ---@param module string
 ---@return boolean
