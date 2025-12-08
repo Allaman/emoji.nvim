@@ -50,7 +50,12 @@ M.load_from_json = function(file_path)
   local content = file:read("a")
   file:close()
 
-  local json_data = vim.json.decode(content, {})
+  local ok, json_data = pcall(vim.json.decode, content, {})
+  if not ok then
+    M.error("failed to decode JSON from '" .. file_path .. "': " .. tostring(json_data))
+    return {}
+  end
+
   if json_data == {} or json_data == nil then
     M.error("empty json decoded from '" .. file_path .. "'")
     return {}

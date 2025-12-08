@@ -27,15 +27,16 @@ T["load emoji from json"] = function()
   eq(want, get)
 end
 
--- TODO how to suppress error notification?
-T["load non existe json"] = function()
-  expect.error(utils.load_from_json("foobar.json"), nil)
+-- NOTE: Error message in output is expected behavior for this test
+T["load non existend json"] = function()
+  local result = utils.load_from_json("foobar.json")
+  eq({}, result)
 end
 
--- FIXME does not "pass"
--- T["load malformed json"] = function()
---   expect.error(emoji.load_emojis_from_json("tests/emoji/test_data/broken.json"))
--- end
+T["load malformed json"] = function()
+  local result = utils.load_from_json("tests/emoji/test_data/broken.json")
+  eq({}, result)
+end
 
 T["get emoji groups"] = function()
   local emojis = utils.load_from_json("tests/emoji/test_data/test.json")
