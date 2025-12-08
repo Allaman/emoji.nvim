@@ -15,7 +15,7 @@ UI.select_and_insert = function(options)
       local emoji = string.sub(choice, 1, space_pos - 1)
       utils.insert_string_at_current_cursor(emoji)
     else
-      vim.api.nvim_notify("Nothing selected", 0, {})
+      vim.notify("Nothing selected", vim.log.levels.INFO, { title = "emoji.nvim" })
     end
   end)
 end
@@ -37,7 +37,7 @@ UI.select_and_insert_emoji_by_group = function(emojis, groups)
       local options = utils.create_emoji_options(filtered_emojis)
       UI.select_and_insert(options)
     else
-      vim.api.nvim_notify("Nothing selected", 0, {})
+      vim.notify("Nothing selected", vim.log.levels.INFO, { title = "emoji.nvim" })
     end
   end)
 end
@@ -59,7 +59,7 @@ UI.select_and_insert_kaomoji_by_group = function(kaomojis, groups)
       local options = utils.create_kaomoji_options(filtered_kaomojis)
       UI.select_and_insert(options)
     else
-      vim.api.nvim_notify("Nothing selected", 0, {})
+      vim.notify("Nothing selected", vim.log.levels.INFO, { title = "emoji.nvim" })
     end
   end)
 end
