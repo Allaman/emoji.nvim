@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.0.1](https://github.com/Allaman/emoji.nvim/compare/v5.0.0...v5.0.1) (2025-12-12)
+
+
+### Bug Fixes
+
+* **cmp:** correct type annotation and field name typo ([3f05b27](https://github.com/Allaman/emoji.nvim/commit/3f05b275eefa479aa50a4b5deec8d66df90505f3))
+* improve JSON decode error handling and tests ([688fd57](https://github.com/Allaman/emoji.nvim/commit/688fd571417419e29d1b268270aac0577196f5b8))
+* replace deprecated vim.api.nvim_notify with vim.notify ([002399b](https://github.com/Allaman/emoji.nvim/commit/002399b619568af909c32986035e7bd8c2b63167))
+
 ## [5.0.0](https://github.com/Allaman/emoji.nvim/compare/v4.0.0...v5.0.0) (2025-03-23)
 
 
