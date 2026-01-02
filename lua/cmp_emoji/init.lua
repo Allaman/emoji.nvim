@@ -1,7 +1,6 @@
 local utils = require("emoji.utils")
 
-local emoji_path_obj = utils.get_emoji_data_path()
-local emojis = emoji_path_obj and utils.load_from_json(emoji_path_obj.filename) or {}
+local emojis = nil -- Lazy-loaded on first use
 
 local source = {}
 
@@ -23,6 +22,12 @@ end
 ---example: { word = ":winkind-face:", label = "😉 :winking-face:", insertText = "😉", filterText = ":winking-face"}
 ---@return cmp_source|nil
 local function create_cmp_items()
+  -- Lazy load emojis on first use (ensures plenary is loaded)
+  if not emojis then
+    local emoji_path_obj = utils.get_emoji_data_path()
+    emojis = emoji_path_obj and utils.load_from_json(emoji_path_obj.filename) or {}
+  end
+
   ---@class cmp_source
   ---@field word string
   ---@field label string
