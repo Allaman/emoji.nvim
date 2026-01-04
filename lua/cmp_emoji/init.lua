@@ -20,21 +20,21 @@ source.get_keyword_pattern = function()
 end
 
 ---creates the datastructure for cmp source
----example: { word = ":winkind-face:", label = "😉 :winking-face:", insertText = "😉", filterText = ":winking-face"}
+---example: { word = ":winkind-face:", label = "😉 :winking-face:", insertText = "😉", lterText = ":winking-face"}
 ---@return cmp_source|nil
 local function create_cmp_items()
   ---@class cmp_source
   ---@field word string
   ---@field label string
   ---@field insertText string
-  ---@field filterText string
+  ---@field lterText string
   local cmp_items = {}
   for _, emoji in pairs(emojis) do
     table.insert(cmp_items, {
       word = string.format(":%s:", emoji.slug),
       label = string.format("%s :%s:", emoji.character, emoji.slug),
       insertText = string.format("%s ", emoji.character),
-      filterText = emoji.slug,
+      lterText = emoji.slug,
     })
   end
   return cmp_items
