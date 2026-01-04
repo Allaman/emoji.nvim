@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.2](https://github.com/Allaman/emoji.nvim/compare/v5.0.1...v5.0.2) (2026-01-04)
+
+
+### Bug Fixes
+
+* **cmp:** Revert "correct type annotation and field name typo" ([bd91fbc](https://github.com/Allaman/emoji.nvim/commit/bd91fbc382c7f8b9ea535d79a0b87f26b398709b))
+
 ## [5.0.1](https://github.com/Allaman/emoji.nvim/compare/v5.0.0...v5.0.1) (2025-12-12)
 
 
