@@ -29,7 +29,7 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 ## 💫 Features
 
 - No dependencies (relies on `vim.ui.select`).
-- (Optional) [fzf-lua](https://github.com/ibhagwan/fzf-lua) integration with `require("fzf-lua").register_ui_select()` (register fzf-lua as the UI interface for vim.ui.select)
+- (Optional) [fzf-lua](https://github.com/ibhagwan/fzf-lua) integration with `require("fzf-lua").register_ui_select()` (register fzf-lua as the UI for vim.ui.select)
 - (Optional) [Snacks Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) integration with `ui_select = true` (default) to replace vim.ui.select
 - (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration (emojis only).
 - (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration (emojis only).
@@ -156,7 +156,7 @@ blink.cmp integration:
 
 1. `:Emoji` and `:Emoji insert` respective `lua require("emoji").insert()` or `:Emoji by-group` respective `lua require("emoji").insert_by_group()` allows you to select an emoji that is inserted at your cursor's current position.
 2. `:Telescope emoji` does the same but invokes Telescope instead of `vim.ui.select`. (if telescope.nvim is installed and the extension loaded).
-3. While in insert mode typing `:` triggers the auto-completion of nvim-cmp. (if nvim-cmp integration is enabled and configured).
+3. While in insert mode typing `:` triggers the autocompletion of nvim-cmp. (if nvim-cmp integration is enabled and configured).
 
 ### Kaomojis
 
@@ -165,7 +165,7 @@ blink.cmp integration:
 
 You can also create key bindings to your liking.
 
-Auto-completion in command mode is supported.
+Autocompletion in command mode is supported.
 
 ## 💡 Similar plugins and inspiration
 
