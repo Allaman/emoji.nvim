@@ -178,4 +178,4 @@ Auto-completion in command mode is supported.
 
 ## ♥️ Credits
 
-Thanks to [hines-r](https://github.com/hines-r) for providing [kaomojis.json](https://github.com/hines-r/kaomoji-api/blob/master/src/kaomoji.json)
+Thanks to [hines-r](https://github.com/hines-r) for providing [kaomojis.json](https://github.com/hines-r/kaomoji-api/blob/master/src/kaomoji.json) and [emojibase.dev](https://emojibase.dev/) for providing emoji data.
