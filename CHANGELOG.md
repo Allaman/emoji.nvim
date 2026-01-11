@@ -1,5 +1,21 @@
 # Changelog
 
+## [6.0.0](https://github.com/Allaman/emoji.nvim/compare/v5.0.2...v6.0.0) (2026-01-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update to Emoji Version 17
+
+### Features
+
+* Update to Emoji Version 17 ([e477ef9](https://github.com/Allaman/emoji.nvim/commit/e477ef90b737579374b1ea1d5ca8284528a69949))
+
+
+### Bug Fixes
+
+* Remove redundant emojis.json ([57a2646](https://github.com/Allaman/emoji.nvim/commit/57a2646f884532292a8eb60543d81b305eaae57a))
+
 ## [5.0.2](https://github.com/Allaman/emoji.nvim/compare/v5.0.1...v5.0.2) (2026-01-04)
 
 
