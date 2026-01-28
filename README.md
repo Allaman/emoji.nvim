@@ -29,7 +29,7 @@ Jokes aside, I could not find a plugin that fulfills my wish for both telescope 
 
 - No dependencies (relies on `vim.ui.select`).
 - (Optional) [fzf-lua](https://github.com/ibhagwan/fzf-lua) integration with `require("fzf-lua").register_ui_select()` (register fzf-lua as the UI for vim.ui.select)
-- (Optional) [Snacks Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) to replace vim.ui.select with snacks.picker no additional config is required as snacks' default is `ui_select = true`
+- (Optional) [Snacks Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) to replace vim.ui.select with snacks you should have pickers enabled `opts = { picker = { enabeld = true }`
 - (Optional) [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) integration (emojis only).
 - (Optional) [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) integration (emojis only).
 - (Optional) [blink.cmp](https://github.com/Saghen/blink.cmp) integration via [blink.compat](https://github.com/saghen/blink.compat) (emojis only).
