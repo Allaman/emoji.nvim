@@ -1,4 +1,5 @@
 local utils = require("emoji.utils")
+local data = require("emoji.data")
 
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
@@ -27,15 +28,7 @@ local make_display = function(entry)
 end
 
 function M.finder()
-  local results = {}
-  local emoji_path_obj = utils.get_emoji_data_path()
-  if not emoji_path_obj then
-    return finders.new_table({ results = {} })
-  end
-  local emojis = utils.load_from_json(emoji_path_obj.filename)
-  for _, e in ipairs(emojis) do
-    table.insert(results, { name = e.unicodeName, character = e.character, group = e.group })
-  end
+  local results = data.emoji_items()
   return finders.new_table({
     results = results,
     entry_maker = function(entry)
@@ -45,7 +38,7 @@ function M.finder()
 
         display = make_display,
         value = entry,
-        character = entry.character,
+        character = entry.insert_text,
         group = entry.group,
         name = entry.name,
       }

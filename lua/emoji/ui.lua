@@ -8,12 +8,12 @@ UI.select_and_insert = function(options)
   vim.ui.select(options, {
     prompt = "Select an entry:",
     kind = "emoji_select",
+    format_item = function(item)
+      return item.label
+    end,
   }, function(choice)
     if choice then
-      -- HACK: find first space position to separate character from name
-      local space_pos = string.find(choice, " ")
-      local emoji = string.sub(choice, 1, space_pos - 1)
-      utils.insert_string_at_current_cursor(emoji)
+      utils.insert_string_at_current_cursor(choice.insert_text)
     else
       vim.notify("Nothing selected", vim.log.levels.INFO, { title = "emoji.nvim" })
     end
@@ -21,22 +21,21 @@ UI.select_and_insert = function(options)
 end
 
 ---Generic function to select and insert by group
----@param data table The emoji or kaomoji data
+---@param items table The emoji or kaomoji item list
 ---@param groups table The groups to choose from
----@param create_options_fn function Function to create options from filtered data
-local function select_and_insert_by_group(data, groups, create_options_fn)
-  local group_options = {}
-  for k, _ in pairs(groups) do
-    table.insert(group_options, k)
-  end
-  vim.ui.select(group_options, {
+local function select_and_insert_by_group(items, groups)
+  vim.ui.select(groups, {
     prompt = "Select a group:",
     kind = "emoji_group_select",
-  }, function(choice, index)
+  }, function(choice)
     if choice then
-      local filtered_data = utils.filter_by_group(data, group_options[index])
-      local options = create_options_fn(filtered_data)
-      UI.select_and_insert(options)
+      local filtered_items = {}
+      for _, item in ipairs(items) do
+        if item.group == choice then
+          table.insert(filtered_items, item)
+        end
+      end
+      UI.select_and_insert(filtered_items)
     else
       vim.notify("Nothing selected", vim.log.levels.INFO, { title = "emoji.nvim" })
     end
@@ -47,14 +46,14 @@ end
 ---creates another vim.ui.select window with emojis from the previous selected group
 ---pastes the selected emoji at the current cursor position
 UI.select_and_insert_emoji_by_group = function(emojis, groups)
-  select_and_insert_by_group(emojis, groups, utils.create_emoji_options)
+  select_and_insert_by_group(emojis, groups)
 end
 
 ---creates a vim.ui.select window with all kaomoji groups to select one
 ---creates another vim.ui.select window with kaomojis from the previous selected group
 ---pastes the selected kaomoji at the current cursor position
 UI.select_and_insert_kaomoji_by_group = function(kaomojis, groups)
-  select_and_insert_by_group(kaomojis, groups, utils.create_kaomoji_options)
+  select_and_insert_by_group(kaomojis, groups)
 end
 
 return UI

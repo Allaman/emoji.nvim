@@ -56,7 +56,7 @@ M.load_from_json = function(file_path)
     return {}
   end
 
-  if json_data == {} or json_data == nil then
+  if json_data == nil or type(json_data) ~= "table" or vim.tbl_isempty(json_data) then
     M.error("empty json decoded from '" .. file_path .. "'")
     return {}
   end
@@ -102,7 +102,10 @@ M.create_emoji_options = function(data)
   local options = {}
   for _, e in ipairs(data) do
     if e.unicodeName ~= nil then
-      table.insert(options, e.character .. " " .. e.unicodeName)
+      table.insert(options, {
+        insert_text = e.character,
+        label = e.character .. " " .. e.unicodeName,
+      })
     end
   end
   return options
@@ -112,7 +115,10 @@ M.create_kaomoji_options = function(data)
   local options = {}
   for _, e in ipairs(data) do
     if e.character ~= nil then
-      table.insert(options, e.character .. " " .. e.group)
+      table.insert(options, {
+        insert_text = e.character,
+        label = e.character .. " " .. e.group,
+      })
     end
   end
   return options

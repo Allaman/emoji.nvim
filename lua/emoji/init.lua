@@ -1,5 +1,7 @@
 local utils = require("emoji.utils")
 local config = require("emoji.config")
+local data = require("emoji.data")
+local ui = require("emoji.ui")
 
 local Main = {}
 
@@ -20,42 +22,18 @@ function Main.setup(opts)
 end
 
 Main.insert = function()
-  local path = utils.get_emoji_data_path()
-  if not path then
-    return
-  end
-  local data = utils.load_from_json(path.filename)
-  local options = utils.create_emoji_options(data)
-  require("emoji.ui").select_and_insert(options)
+  ui.select_and_insert(data.emoji_items())
 end
 Main.insert_by_group = function()
-  local path = utils.get_emoji_data_path()
-  if not path then
-    return
-  end
-  local data = utils.load_from_json(path.filename)
-  local groups = utils.get_groups(data)
-  require("emoji.ui").select_and_insert_emoji_by_group(data, groups)
+  ui.select_and_insert_emoji_by_group(data.emoji_items(), data.emoji_groups())
 end
 
 Main.insert_kaomoji = function()
-  local path = utils.get_kaomoji_data_path()
-  if not path then
-    return
-  end
-  local data = require("emoji.kaomoji").normalized_data(path.filename)
-  local options = utils.create_kaomoji_options(data)
-  require("emoji.ui").select_and_insert(options)
+  ui.select_and_insert(data.kaomoji_items())
 end
 
 Main.insert_kaomoji_by_group = function()
-  local path = utils.get_kaomoji_data_path()
-  if not path then
-    return
-  end
-  local data = require("emoji.kaomoji").normalized_data(path.filename)
-  local groups = utils.get_groups(data)
-  require("emoji.ui").select_and_insert_kaomoji_by_group(data, groups)
+  ui.select_and_insert_kaomoji_by_group(data.kaomoji_items(), data.kaomoji_groups())
 end
 
 return Main

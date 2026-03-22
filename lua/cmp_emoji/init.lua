@@ -1,7 +1,4 @@
-local utils = require("emoji.utils")
-
-local emoji_path_obj = utils.get_emoji_data_path()
-local emojis = emoji_path_obj and utils.load_from_json(emoji_path_obj.filename) or {}
+local data = require("emoji.data")
 
 local source = {}
 
@@ -29,11 +26,11 @@ local function create_cmp_items()
   ---@field insertText string
   ---@field lterText string
   local cmp_items = {}
-  for _, emoji in pairs(emojis) do
+  for _, emoji in ipairs(data.emoji_items()) do
     table.insert(cmp_items, {
       word = string.format(":%s:", emoji.slug),
       label = string.format("%s :%s:", emoji.character, emoji.slug),
-      insertText = string.format("%s ", emoji.character),
+      insertText = string.format("%s ", emoji.insert_text),
       lterText = emoji.slug,
     })
   end
