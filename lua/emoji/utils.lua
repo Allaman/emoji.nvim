@@ -34,7 +34,11 @@ end
 ---@param version number
 ---@return boolean
 M.is_neovim_version_satisfied = function(version)
-  return version <= tonumber(vim.version().minor)
+  local v = vim.version()
+  if v.major > 0 then
+    return true
+  end
+  return version <= tonumber(v.minor)
 end
 
 ---load emoji data from JSON
