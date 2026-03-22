@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.1](https://github.com/Allaman/emoji.nvim/compare/v6.0.0...v6.0.1) (2026-03-22)
+
+
+### Bug Fixes
+
+* make Neovim version check more robust ([d9fe502](https://github.com/Allaman/emoji.nvim/commit/d9fe502d488a62c1c022e89f1402b7ec721d245c))
+
 ## [6.0.0](https://github.com/Allaman/emoji.nvim/compare/v5.0.2...v6.0.0) (2026-01-11)
 
 
