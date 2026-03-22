@@ -1,10 +1,6 @@
 local M = {}
 
 ---@class EmojiConfig
----@field enable_cmp_integration boolean
----@field plugin_path string
-
----@class EmojiConfigPartial
 ---@field enable_cmp_integration? boolean
 ---@field plugin_path? string
 
@@ -19,7 +15,7 @@ M.paths = {
   kaomoji = "emoji.nvim/lua/data/kaomojis.json",
 }
 
----@param options EmojiConfigPartial?
+---@param options? EmojiConfig
 function M.setup(options)
   M.options = vim.tbl_deep_extend("force", {}, M.options, options or {})
 end
