@@ -28,10 +28,10 @@ local function create_cmp_items()
   local cmp_items = {}
   for _, emoji in ipairs(data.emoji_items()) do
     table.insert(cmp_items, {
-      word = string.format(":%s:", emoji.slug),
-      label = string.format("%s :%s:", emoji.character, emoji.slug),
+      word = string.format(":%s:", emoji.name),
+      label = string.format("%s :%s:", emoji.character, emoji.name),
       insertText = string.format("%s ", emoji.insert_text),
-      lterText = emoji.slug,
+      lterText = emoji.name,
     })
   end
   return cmp_items
