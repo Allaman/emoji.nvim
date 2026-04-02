@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.2](https://github.com/Allaman/emoji.nvim/compare/v6.0.1...v6.0.2) (2026-04-02)
+
+
+### Bug Fixes
+
+* Search by unicode name ([#50](https://github.com/Allaman/emoji.nvim/issues/50)) ([edbcb06](https://github.com/Allaman/emoji.nvim/commit/edbcb068c082b961841bbf23c4f01b5b665cb7ef))
+
 ## [6.0.1](https://github.com/Allaman/emoji.nvim/compare/v6.0.0...v6.0.1) (2026-03-22)
 
 
