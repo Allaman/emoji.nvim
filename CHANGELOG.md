@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.3](https://github.com/Allaman/emoji.nvim/compare/v6.0.2...v6.0.3) (2026-04-13)
+
+
+### Bug Fixes
+
+* Update various APIs ([07a378c](https://github.com/Allaman/emoji.nvim/commit/07a378c490d9f1beb4808cfe7a0cfab8165b8f3c))
+
 ## [6.0.2](https://github.com/Allaman/emoji.nvim/compare/v6.0.1...v6.0.2) (2026-04-02)
 
 
