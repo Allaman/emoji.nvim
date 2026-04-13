@@ -28,7 +28,6 @@ function M.setup()
   vim.opt.packpath = { M.root(".tests/site") }
 
   M.load("echasnovski/mini.nvim")
-  M.load("nvim-lua/plenary.nvim")
 
   -- Set up 'mini.test'
   require("mini.test").setup()

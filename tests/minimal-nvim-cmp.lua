@@ -27,9 +27,6 @@ local plugins = {
   {
     "allaman/emoji.nvim",
     dev = true,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
     opts = {
       enable_cmp_integration = true,
       plugin_path = vim.fn.expand("$HOME/workspace/github.com/allaman"),

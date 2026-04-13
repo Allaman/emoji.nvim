@@ -19,7 +19,7 @@ local function load_emojis()
     return cache.emojis
   end
 
-  local data = utils.load_from_json(path.filename)
+  local data = utils.load_from_json(path)
   local items = {}
   for _, e in ipairs(data) do
     if e.character ~= nil and e.unicodeName ~= nil then
@@ -49,7 +49,7 @@ local function load_kaomojis()
     return cache.kaomojis
   end
 
-  local data = kaomoji.normalized_data(path.filename)
+  local data = kaomoji.normalized_data(path)
   local items = {}
   for _, e in ipairs(data) do
     if e.character ~= nil and e.group ~= nil then
