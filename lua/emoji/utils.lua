@@ -96,7 +96,8 @@ end
 
 M.insert_string_at_current_cursor = function(text)
   local buf = vim.api.nvim_get_current_buf()
-  local row, col = table.unpack(vim.api.nvim_win_get_cursor(0))
+  local cursor = vim.api.nvim_win_get_cursor(0) --- always returns a tuple
+  local row, col = cursor[1], cursor[2]
   row = row - 1 -- Adjust because Lua is 1-indexed but Neovim API expects 0-indexed
   vim.api.nvim_buf_set_text(buf, row, col, row, col, { text })
 end
