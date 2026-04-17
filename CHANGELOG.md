@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.4](https://github.com/Allaman/emoji.nvim/compare/v6.0.3...v6.0.4) (2026-04-17)
+
+
+### Bug Fixes
+
+* Remove table.unpack call [#54](https://github.com/Allaman/emoji.nvim/issues/54) ([247aa96](https://github.com/Allaman/emoji.nvim/commit/247aa96c03b343987ed0782c6e00201d781746e3))
+
 ## [6.0.3](https://github.com/Allaman/emoji.nvim/compare/v6.0.2...v6.0.3) (2026-04-13)
 
 
