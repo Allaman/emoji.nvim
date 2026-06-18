@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.0](https://github.com/Allaman/emoji.nvim/compare/v6.0.4...v6.1.0) (2026-06-18)
+
+
+### Features
+
+* add new Telescope extensions kaomoji to support kaomoji picker ([6d4aab8](https://github.com/Allaman/emoji.nvim/commit/6d4aab8b127946bcce79de351f17d9d4f2dd1684))
+
 ## [6.0.4](https://github.com/Allaman/emoji.nvim/compare/v6.0.3...v6.0.4) (2026-04-17)
 
 
