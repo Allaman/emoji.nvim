@@ -97,6 +97,7 @@ With [Lazy.nvim](https://github.com/folke/lazy.nvim):
     -- optional for telescope integration
     local ts = require('telescope').load_extension 'emoji'
     vim.keymap.set('n', '<leader>se', ts.emoji, { desc = '[S]earch [E]moji' })
+    vim.keymap.set('n', '<leader>sk', ts.kaomoji, { desc = '[S]earch [K]aomoji' })
   end,
 }
 ```
@@ -152,7 +153,7 @@ blink.cmp integration:
 ### Emojis
 
 1. `:Emoji` and `:Emoji insert` respective `lua require("emoji").insert()` or `:Emoji by-group` respective `lua require("emoji").insert_by_group()` allows you to select an emoji that is inserted at your cursor's current position.
-2. `:Telescope emoji` does the same but invokes Telescope instead of `vim.ui.select`. (if telescope.nvim is installed and the extension loaded).
+2. `:Telescope emoji [emoji]` or `Telescope emoji kaomoji` does the same but invokes Telescope instead of `vim.ui.select`. (if telescope.nvim is installed and the extension loaded).
 3. While in insert mode typing `:` triggers the autocompletion of nvim-cmp. (if nvim-cmp integration is enabled and configured).
 
 ### Kaomojis

@@ -27,8 +27,8 @@ local make_display = function(entry)
   })
 end
 
-function M.finder()
-  local results = data.emoji_items()
+function M.finder(get_items)
+  local results = get_items()
   return finders.new_table({
     results = results,
     entry_maker = function(entry)
@@ -46,12 +46,12 @@ function M.finder()
   })
 end
 
-function M.telescope(opts)
+function M.telescope(opts, type, get_items)
   pickers
     .new(opts, {
       results_title = "Emoji.nvim",
-      prompt_title = "Find Emojis",
-      finder = M.finder(),
+      prompt_title = "Find " .. type,
+      finder = M.finder(get_items),
       sorter = conf.generic_sorter(opts),
       attach_mappings = function(prompt_bufnr)
         actions.select_default:replace(function()
@@ -67,6 +67,11 @@ end
 
 return require("telescope").register_extension({
   exports = {
-    emoji = M.telescope,
+    emoji = function(opts)
+      M.telescope(opts, "Emojis", data.emoji_items)
+    end,
+    kaomoji = function(opts)
+      M.telescope(opts, "Kaomojis", data.kaomoji_items)
+    end,
   },
 })

@@ -57,7 +57,9 @@ local function load_kaomojis()
         insert_text = e.character,
         label = e.character .. " " .. e.group,
         character = e.character,
+        name = " ",
         group = e.group,
+        slug = " ",
       })
     end
   end
