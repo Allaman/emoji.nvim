@@ -53,13 +53,19 @@ local function load_kaomojis()
   local items = {}
   for _, e in ipairs(data) do
     if e.character ~= nil and e.group ~= nil then
+      local keywords = table.concat(e.keywords, ", ")
+      local label = e.character .. " " .. e.group
+      if keywords ~= "" then
+        label = label .. " " .. keywords
+      end
       table.insert(items, {
         insert_text = e.character,
-        label = e.character .. " " .. e.group,
+        label = label,
         character = e.character,
         name = " ",
         group = e.group,
         slug = " ",
+        keywords = keywords,
       })
     end
   end

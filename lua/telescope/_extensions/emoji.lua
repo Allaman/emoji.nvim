@@ -24,6 +24,7 @@ local make_display = function(entry)
   return displayer({
     entry.character .. " " .. entry.name,
     entry.group,
+    entry.keywords,
   })
 end
 
@@ -32,15 +33,20 @@ function M.finder(get_items)
   return finders.new_table({
     results = results,
     entry_maker = function(entry)
+      local ordinal = entry.name .. entry.group
+      if entry.keywords then
+        ordinal = ordinal .. " " .. entry.keywords
+      end
       return {
         -- this defines what terms can be searched in telescope
-        ordinal = entry.name .. entry.group,
+        ordinal = ordinal,
 
         display = make_display,
         value = entry,
         character = entry.insert_text,
         group = entry.group,
         name = entry.name,
+        keywords = entry.keywords or "",
       }
     end,
   })
