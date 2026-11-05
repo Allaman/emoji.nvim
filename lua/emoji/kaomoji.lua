@@ -3,6 +3,7 @@ local utils = require("emoji.utils")
 local M = {}
 
 ---creates normalized data structure for Kaomojis
+---an entry is either a plain string or a table { character = string, keywords? = string[] }
 ---@param file_path string
 ---@return table<string><string>
 M.normalized_data = function(file_path)
@@ -14,7 +15,11 @@ M.normalized_data = function(file_path)
   end
   for group, chars in pairs(data) do
     for _, char in pairs(chars) do
-      table.insert(normalized_data, { group = group, character = char })
+      if type(char) == "table" then
+        table.insert(normalized_data, { group = group, character = char.character, keywords = char.keywords or {} })
+      else
+        table.insert(normalized_data, { group = group, character = char, keywords = {} })
+      end
     end
   end
   return normalized_data
