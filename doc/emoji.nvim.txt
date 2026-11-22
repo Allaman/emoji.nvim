@@ -1,5 +1,5 @@
 *emoji.nvim.txt*
-                         For Neovim >= 0.9.0    Last change: 2026 September 20
+                          For Neovim >= 0.9.0    Last change: 2026 November 22
 
 ==============================================================================
 Table of Contents                               *emoji.nvim-table-of-contents*
@@ -23,7 +23,7 @@ Though there are a couple of plugins (see
 |emoji.nvim-similar-plugins-and-inspiration|), I decided to make a 15th plugin
 <https://xkcd.com/927/>.
 
-Jokesaside, I could not find a plugin that fulfills my wish for both telescope
+Jokes aside, I could not find a plugin that fulfills my wish for both telescope
 and cmp integration, so why not write a plugin myself?
 
 
