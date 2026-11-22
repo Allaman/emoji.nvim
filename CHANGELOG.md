@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.3.0](https://github.com/Allaman/emoji.nvim/compare/v6.2.0...v6.3.0) (2026-11-22)
+
+
+### Features
+
+* add optional search keywords to kaomoji data ([5bbd31e](https://github.com/Allaman/emoji.nvim/commit/5bbd31eef8689a2f27ea75fe3ce147911f65509c)), closes [#61](https://github.com/Allaman/emoji.nvim/issues/61)
+
 ## [6.2.0](https://github.com/Allaman/emoji.nvim/compare/v6.1.0...v6.2.0) (2026-09-20)
 
 
